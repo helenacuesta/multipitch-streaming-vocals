@@ -21,10 +21,6 @@ import config
 import tensorflow.keras.backend as K
 import tensorflow as tf
 
-'''
-General util functions
-Some of the functions in this file are taken/adapted from deepsalience.
-'''
 
 RANDOM_STATE = 42
 

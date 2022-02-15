@@ -6,7 +6,6 @@ Models optimized for four-part a cappella ensemble singing.
 from __future__ import print_function
 import models
 
-import utils
 import config
 
 import tensorflow as tf
@@ -19,6 +18,25 @@ import scipy.signal
 
 import os
 import argparse
+
+
+def get_freq_grid():
+    """Get the stft frequency grid
+    """
+    # freq_grid = librosa.fft_frequencies(sr=config.fs, n_fft=config.stft_size)
+    freq_grid = librosa.cqt_frequencies(n_bins=config.num_features, fmin=config.f_min, bins_per_octave=config.bins_per_octave)
+
+    return freq_grid
+
+
+def get_time_grid(n_time_frames):
+    """Get the hcqt time grid
+    """
+    hop_length = config.hopsize
+    time_grid = librosa.core.frames_to_time(
+        range(n_time_frames), sr=config.fs, hop_length=hop_length
+    )
+    return time_grid
 
 def compute_hcqt(audiofile):
 
@@ -118,8 +136,8 @@ def pitch_activations_to_mf0(pitch_activation_mat, thresh):
     """Convert pitch activation map to multipitch
     by peak picking and thresholding
     """
-    freqs = utils.get_freq_grid()
-    times = utils.get_time_grid(pitch_activation_mat.shape[1])
+    freqs = get_freq_grid()
+    times = get_time_grid(pitch_activation_mat.shape[1])
 
     peak_thresh_mat = np.zeros(pitch_activation_mat.shape)
     peaks = scipy.signal.argrelmax(pitch_activation_mat, axis=0)
