@@ -6,7 +6,7 @@ Models optimized for four-part a cappella ensemble singing.
 from __future__ import print_function
 import models
 
-import config
+import config_pred as config
 
 import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
