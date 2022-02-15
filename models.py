@@ -4,7 +4,7 @@ from tensorflow.keras import Model
 
 import tensorflow.keras.backend as K
 
-import config
+import config_pred as config
 
 
 def encoder_harmonic_noskip():
