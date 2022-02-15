@@ -1,2 +1,30 @@
 # Multi-pitch Streaming of Vocal Quartets
-Repo in construction
+
+<span style="color:green">**This repository is currently under preparation. Essential updates are reported below.**</span>.
+
+This is the accompanying repository of Chapter 5 of the PhD dissertation:
+
+Helena Cuesta. _Data-driven Pitch Content Description of Choral Singing Recording_. Submitted, 2022.
+Universitat Pompeu Fabra, Barcelona.
+
+
+## Description
+
+The proposed multi-pitch streaming models convert an input audio recording of a four-part vocal ensemble into four independent pitch contours, one for each melodic voice.
+
+As described in the documentation, there are three main models available, although we strongly recomment the use of **U-Net-Harm** as it obtains the best performances in our experiments.
+
+## Prediction
+
+Here's how to call the prediction script from the command line:
+
+``python predict_on_audio.py --model unet_harm --output output_dir --audiofile input_mixture.wav``
+
+* The `model` argument can be `unet_harm`, `unet_stand`, `unet_harm_noskip`.
+* The `output` argument denotes the output directory to store the results (salience functions and F0 contours)
+* The `audiofile` argument should be the full path to the input audio file.
+
+The code also allows predicting the output of multiple files, which should all be in the same folder indicated using the parameter `audiofolder` instead of `audiofile`.
+
+## Current status of the repo
+* **Feb 15th 2022**: the models are not currently available.
