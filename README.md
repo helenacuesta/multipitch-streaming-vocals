@@ -7,6 +7,10 @@ This is the accompanying repository of Chapter 5 of the PhD dissertation:
 Helena Cuesta. _Data-driven Pitch Content Description of Choral Singing Recordings_. Submitted, 2022.
 Universitat Pompeu Fabra, Barcelona.
 
+**Figure 1**: Example U-Net-Harm outputs.
+
+<img src="https://user-images.githubusercontent.com/5990088/154234442-883670d8-807b-4520-83b4-315ca86ff518.png" width="600"/>
+
 
 ## Description
 
