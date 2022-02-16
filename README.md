@@ -20,7 +20,7 @@ Here's how to call the prediction script from the command line:
 
 ``python predict_on_audio.py --model unet_harm --output output_dir --audiofile input_mixture.wav``
 
-* The `model` argument can be `unet_harm`, `unet_stand`, `unet_harm_noskip`.
+* The `model` argument can be `unet_harm`, `unet_stand`, `unet_harm_noskip`, `unet_harm_hcqt`, each referring to a different model variant as described in the reference.
 * The `output` argument denotes the output directory to store the results (salience functions and F0 contours). One CSV file for each output F0 trajectory and one NPY file with each output salience will be stored
 in this directory inside a folder with the model's name.
 * The `audiofile` argument should be the full path to the input audio file.

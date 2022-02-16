@@ -193,21 +193,21 @@ def main(args):
         model.load_weights(model_path)
         thresholds = [0.1, 0.1, 0.1, 0.1]
 
-    elif model_name == 'unet_harm_noskip_nobsq':
+    # elif model_name == 'unet_harm_noskip_nobsq':
+    #
+    #     save_key = 'unet_harm_noskip_nobsq'
+    #     model_path = "./models/unet_harm_noskip_nobsq.h5"
+    #     model = models.unet_harmonic_noskip()
+    #     model.load_weights(model_path)
+    #     thresholds = [0.1, 0.1, 0.1, 0.1]
 
-        save_key = 'unet_harm_noskip_nobsq'
-        model_path = "./models/unet_harm_noskip_nobsq.h5"
-        model = models.unet_harmonic_noskip()
-        model.load_weights(model_path)
-        thresholds = [0.1, 0.1, 0.1, 0.1]
-
-    elif model_name == 'unet_harm_nobsq':
-
-        save_key = 'unet_harm_nobsq'
-        model_path = "./models/unet_harm_cqt_nobsq.h5"
-        model = models.unet_harmonic()
-        model.load_weights(model_path)
-        thresholds = [0.1, 0.1, 0.1, 0.1]
+    # elif model_name == 'unet_harm_nobsq':
+    #
+    #     save_key = 'unet_harm_nobsq'
+    #     model_path = "./models/unet_harm_cqt_nobsq.h5"
+    #     model = models.unet_harmonic()
+    #     model.load_weights(model_path)
+    #     thresholds = [0.1, 0.1, 0.1, 0.1]
 
     elif model_name == 'unet_harm_hcqt':
 
@@ -217,16 +217,16 @@ def main(args):
         model.load_weights(model_path)
         thresholds = [0.1, 0.1, 0.1, 0.1]
 
-    elif model_name == 'unet_harm_hcqt_nobsq':
-
-        save_key = 'unet_harm_hcqt_nobsq'
-        model_path = "./models/unet_harm_hcqt_nobsq.h5"
-        model = models.unet_harmonic(hcqt_flag=True)
-        model.load_weights(model_path)
-        thresholds = [0.1, 0.1, 0.1, 0.1]
+    # elif model_name == 'unet_harm_hcqt_nobsq':
+    #
+    #     save_key = 'unet_harm_hcqt_nobsq'
+    #     model_path = "./models/unet_harm_hcqt_nobsq.h5"
+    #     model = models.unet_harmonic(hcqt_flag=True)
+    #     model.load_weights(model_path)
+    #     thresholds = [0.1, 0.1, 0.1, 0.1]
 
     else:
-        raise ValueError("Specified model must be unet_stand, unet_harm, unet_harm_noskip, unet_harm_noskip_nobsq, unet_harm_nobsq, unet_harm_hcqt, unet_harm_hcqt_nobsq.")
+        raise ValueError("Specified model must be unet_stand, unet_harm, unet_harm_noskip, unet_harm_hcqt.")
 
 
     output_dir = os.path.join(args.output_dir, save_key) #os.path.join("/home/helena/workspace/unet/results", save_key)
