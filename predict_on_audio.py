@@ -379,6 +379,7 @@ if __name__ == "__main__":
     parser.add_argument("--model",
                         dest='model_name',
                         type=str,
+                        default="unet_harm",
                         help="Specify the model to use for prediction:"
                              "unet_stand | unet_harm | unet_harm_noskip")
 

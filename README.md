@@ -4,7 +4,7 @@
 
 This is the accompanying repository of Chapter 5 of the PhD dissertation:
 
-Helena Cuesta. _Data-driven Pitch Content Description of Choral Singing Recording_. Submitted, 2022.
+Helena Cuesta. _Data-driven Pitch Content Description of Choral Singing Recordings_. Submitted, 2022.
 Universitat Pompeu Fabra, Barcelona.
 
 
@@ -12,7 +12,7 @@ Universitat Pompeu Fabra, Barcelona.
 
 The proposed multi-pitch streaming models convert an input audio recording of a four-part vocal ensemble into four independent pitch contours, one for each melodic voice.
 
-As described in the documentation, there are three main models available, although we strongly recomment the use of **U-Net-Harm** as it obtains the best performances in our experiments.
+As described in the documentation, there are three main models available, although we strongly recomment the use of **U-Net-Harm** (`unet_harm`) as it obtains the best performances in our experiments.
 
 ## Prediction
 
